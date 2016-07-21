@@ -10,19 +10,20 @@ import UIKit
 
 final class ItemCell: UITableViewCell {
     
-    static let reuseIdentifier = "ItemCellIdentifier"
-    
     enum ItemStatus: String {
         case Waiting = "Waiting"
         case InTransit = "In Transit"
     }
     
     struct ViewModel {
+        
         var itemImage: UIImage?
-        let itemNumber: Int
+        let itemNumber: String
         let kioskNumber: Int
         let startTime: NSDate
         let itemStatus: ItemStatus
+        let numberFormatter: NSNumberFormatter
+        
     }
     
     var viewModel: ViewModel? {
@@ -52,7 +53,6 @@ final class ItemCell: UITableViewCell {
         // set up button
     }
     
-    
     private func updateCell() {
         guard let viewModel = viewModel else {
             return
@@ -65,8 +65,7 @@ final class ItemCell: UITableViewCell {
 
         statusLabel.text = viewModel.itemStatus.rawValue
         createTimer()
-        
-        
+
     }
     
     private func createTimer() {
@@ -79,29 +78,26 @@ final class ItemCell: UITableViewCell {
     }
     
     @objc private func updateTimerLabel() {
-        queueTimerLabel.text = createTimerStringFromDate(viewModel?.startTime)
+        
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.minimumIntegerDigits = 2
+        numberFormatter.maximumIntegerDigits = 2
+        
+        guard let timerString = createTimerStringFromDate(viewModel?.startTime, numberFormatter: numberFormatter) else { return }
+        
+        queueTimerLabel.text = timerString
     }
     
-    
-    
-    private func createTimerStringFromDate(date: NSDate?, numberFormatter: NSNumberFormatter = NSNumberFormatter()) -> String {
+    private func createTimerStringFromDate(date: NSDate?, numberFormatter: NSNumberFormatter = NSNumberFormatter()) -> String? {
         
-        guard let date = date else {
-            print("date was nil")
-            return ""
-        }
+        guard let date = date else { return nil }
         
         let timeInterval = NSDate().timeIntervalSinceDate(date)
         
         let minutes = floor(timeInterval / 60)
         let seconds = timeInterval % 60
         
-        let numberFormatter = NSNumberFormatter()
-        numberFormatter.minimumIntegerDigits = 2
-        numberFormatter.maximumIntegerDigits = 2
-        
-        let minuteString = numberFormatter.stringFromNumber(minutes) ?? "00"
-        let secondsString = numberFormatter.stringFromNumber(seconds) ?? "00"
+        guard let minuteString = numberFormatter.stringFromNumber(minutes), secondsString = numberFormatter.stringFromNumber(seconds) else { return nil }
         
         return String(":\(minuteString):\(secondsString)")
     }

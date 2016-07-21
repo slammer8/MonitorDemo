@@ -22,6 +22,10 @@ final class ItemQueueDataSource: NSObject {
         
     }
     
+    func updateDataSource(){
+        // update the queue
+    }
+    
     func setUpDataSource() {
         setUpTableView()
         registerCells()
@@ -35,14 +39,8 @@ final class ItemQueueDataSource: NSObject {
     private func registerCells() {
         tableView.registerReusableCell(ItemCell.self)
     }
-        
-
-}
-
-extension ItemQueueDataSource: MonitorServiceDelegate {
     
-    func monitorServiceDelegate(monitorService: MonitorService, didReceiveUpdate update: MonitorUpdate) {
-        
+    func updateQueue(update: MonitorUpdate) {
         switch update.status {
         case .AddedToQueue:
             queue.append(update)
@@ -53,6 +51,14 @@ extension ItemQueueDataSource: MonitorServiceDelegate {
             queue.removeAtIndex(index)
         }
         tableView.reloadData()
+    }
+
+}
+
+extension ItemQueueDataSource: MonitorServiceDelegate {
+    
+    func monitorServiceDelegate(monitorService: MonitorService, didReceiveUpdate update: MonitorUpdate) {
+        updateQueue(update)
     }
 }
 
@@ -71,7 +77,8 @@ extension ItemQueueDataSource: UITableViewDataSource {
         let itemUpdate = queue[indexPath.row]
         
         let itemCell = tableView.dequeueReusableCell(indexPath: indexPath) as ItemCell
-                
+        
+        ItemCell.ViewModel(itemUpdate)
         itemCell.viewModel = ItemCell.ViewModel(itemImage: nil, itemNumber: itemUpdate.itemNumber, kioskNumber: itemUpdate.kioskNumber, startTime: itemUpdate.time, itemStatus: ItemCell.ItemStatus.Waiting)
         
         return itemCell

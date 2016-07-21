@@ -16,6 +16,8 @@
 		9402AA571D40F41800E78938 /* MonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA561D40F41800E78938 /* MonitorService.swift */; };
 		9402AA5B1D40F71E00E78938 /* ItemQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA5A1D40F71E00E78938 /* ItemQueueViewController.swift */; };
 		9402AA5D1D40F7F600E78938 /* ItemQueueDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA5C1D40F7F600E78938 /* ItemQueueDataSource.swift */; };
+		9402AA621D40FA4C00E78938 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA601D40FA4C00E78938 /* ItemCell.swift */; };
+		9402AA631D40FA4C00E78938 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9402AA611D40FA4C00E78938 /* ItemCell.xib */; };
 		9402AA661D41004100E78938 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA651D41004100E78938 /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,9 @@
 		9402AA561D40F41800E78938 /* MonitorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorService.swift; sourceTree = "<group>"; };
 		9402AA5A1D40F71E00E78938 /* ItemQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemQueueViewController.swift; sourceTree = "<group>"; };
 		9402AA5C1D40F7F600E78938 /* ItemQueueDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemQueueDataSource.swift; sourceTree = "<group>"; };
+		9402AA601D40FA4C00E78938 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		9402AA611D40FA4C00E78938 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		9402AA651D41004100E78938 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,14 +89,17 @@
 		9402AA331D40F2A100E78938 /* MonitorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9402AA381D40F2A200E78938 /* Main.storyboard */,
 				9402AA341D40F2A200E78938 /* AppDelegate.swift */,
 				9402AA5A1D40F71E00E78938 /* ItemQueueViewController.swift */,
-				9402AA381D40F2A200E78938 /* Main.storyboard */,
+				9402AA5C1D40F7F600E78938 /* ItemQueueDataSource.swift */,
+				9402AA651D41004100E78938 /* Reusable.swift */,
 				9402AA3B1D40F2A200E78938 /* Assets.xcassets */,
 				9402AA3D1D40F2A200E78938 /* LaunchScreen.storyboard */,
 				9402AA401D40F2A200E78938 /* Info.plist */,
 				9402AA541D40F2C400E78938 /* MonitorUpdate.swift */,
 				9402AA561D40F41800E78938 /* MonitorService.swift */,
+				9402AA641D40FEDA00E78938 /* Reusable Cells */,
 			);
 			path = MonitorDemo;
 			sourceTree = "<group>";
@@ -103,6 +111,15 @@
 				9402AA4B1D40F2A200E78938 /* Info.plist */,
 			);
 			path = MonitorDemoTests;
+			sourceTree = "<group>";
+		};
+		9402AA641D40FEDA00E78938 /* Reusable Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9402AA601D40FA4C00E78938 /* ItemCell.swift */,
+				9402AA611D40FA4C00E78938 /* ItemCell.xib */,
+			);
+			name = "Reusable Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9402AA631D40FA4C00E78938 /* ItemCell.xib in Resources */,
 				9402AA3F1D40F2A200E78938 /* LaunchScreen.storyboard in Resources */,
 				9402AA3C1D40F2A200E78938 /* Assets.xcassets in Resources */,
 				9402AA3A1D40F2A200E78938 /* Main.storyboard in Resources */,
@@ -208,6 +226,7 @@
 			files = (
 				9402AA571D40F41800E78938 /* MonitorService.swift in Sources */,
 				9402AA551D40F2C400E78938 /* MonitorUpdate.swift in Sources */,
+				9402AA621D40FA4C00E78938 /* ItemCell.swift in Sources */,
 				9402AA5D1D40F7F600E78938 /* ItemQueueDataSource.swift in Sources */,
 				9402AA351D40F2A200E78938 /* AppDelegate.swift in Sources */,
 				9402AA5B1D40F71E00E78938 /* ItemQueueViewController.swift in Sources */,

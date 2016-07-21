@@ -10,7 +10,7 @@ import Foundation
 
 protocol MonitorServiceDelegate: class {
     
-    func monitorServiceDelegate(monitorService: MonitorService, didReceiveUpdate: MonitorUpdate)
+    func monitorServiceDelegate(monitorService: MonitorService, didReceiveUpdate update: MonitorUpdate)
 }
 
 final class MonitorService {
