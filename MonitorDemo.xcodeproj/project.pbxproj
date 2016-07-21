@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9402AA351D40F2A200E78938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA341D40F2A200E78938 /* AppDelegate.swift */; };
-		9402AA371D40F2A200E78938 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA361D40F2A200E78938 /* ViewController.swift */; };
 		9402AA3A1D40F2A200E78938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9402AA381D40F2A200E78938 /* Main.storyboard */; };
 		9402AA3C1D40F2A200E78938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9402AA3B1D40F2A200E78938 /* Assets.xcassets */; };
 		9402AA3F1D40F2A200E78938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9402AA3D1D40F2A200E78938 /* LaunchScreen.storyboard */; };
 		9402AA4A1D40F2A200E78938 /* MonitorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA491D40F2A200E78938 /* MonitorDemoTests.swift */; };
+		9402AA551D40F2C400E78938 /* MonitorUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA541D40F2C400E78938 /* MonitorUpdate.swift */; };
+		9402AA571D40F41800E78938 /* MonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA561D40F41800E78938 /* MonitorService.swift */; };
+		9402AA5B1D40F71E00E78938 /* ItemQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA5A1D40F71E00E78938 /* ItemQueueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,6 @@
 /* Begin PBXFileReference section */
 		9402AA311D40F2A100E78938 /* MonitorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonitorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9402AA341D40F2A200E78938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9402AA361D40F2A200E78938 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9402AA391D40F2A200E78938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9402AA3B1D40F2A200E78938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9402AA3E1D40F2A200E78938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		9402AA451D40F2A200E78938 /* MonitorDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonitorDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9402AA491D40F2A200E78938 /* MonitorDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorDemoTests.swift; sourceTree = "<group>"; };
 		9402AA4B1D40F2A200E78938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9402AA541D40F2C400E78938 /* MonitorUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorUpdate.swift; sourceTree = "<group>"; };
+		9402AA561D40F41800E78938 /* MonitorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorService.swift; sourceTree = "<group>"; };
+		9402AA5A1D40F71E00E78938 /* ItemQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemQueueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				9402AA341D40F2A200E78938 /* AppDelegate.swift */,
-				9402AA361D40F2A200E78938 /* ViewController.swift */,
+				9402AA5A1D40F71E00E78938 /* ItemQueueViewController.swift */,
 				9402AA381D40F2A200E78938 /* Main.storyboard */,
 				9402AA3B1D40F2A200E78938 /* Assets.xcassets */,
 				9402AA3D1D40F2A200E78938 /* LaunchScreen.storyboard */,
 				9402AA401D40F2A200E78938 /* Info.plist */,
+				9402AA541D40F2C400E78938 /* MonitorUpdate.swift */,
+				9402AA561D40F41800E78938 /* MonitorService.swift */,
 			);
 			path = MonitorDemo;
 			sourceTree = "<group>";
@@ -197,8 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9402AA371D40F2A200E78938 /* ViewController.swift in Sources */,
+				9402AA571D40F41800E78938 /* MonitorService.swift in Sources */,
+				9402AA551D40F2C400E78938 /* MonitorUpdate.swift in Sources */,
 				9402AA351D40F2A200E78938 /* AppDelegate.swift in Sources */,
+				9402AA5B1D40F71E00E78938 /* ItemQueueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
