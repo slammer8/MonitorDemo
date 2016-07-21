@@ -8,21 +8,21 @@
 
 import UIKit
 
-class ItemQueueViewController: UITableViewController {
+final class ItemQueueViewController: UITableViewController {
 
+    private var dataSource: ItemQueueDataSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpDataSource()
+    }
+    
+    private func setUpDataSource() {
+        dataSource = ItemQueueDataSource(tableView: self.tableView)
+        dataSource?.setUpDataSource()
+        tableView.dataSource = dataSource
+        tableView.reloadData()
     }
 
-    // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
 }

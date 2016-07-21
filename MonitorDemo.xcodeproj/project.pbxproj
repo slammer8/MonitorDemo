@@ -15,6 +15,8 @@
 		9402AA551D40F2C400E78938 /* MonitorUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA541D40F2C400E78938 /* MonitorUpdate.swift */; };
 		9402AA571D40F41800E78938 /* MonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA561D40F41800E78938 /* MonitorService.swift */; };
 		9402AA5B1D40F71E00E78938 /* ItemQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA5A1D40F71E00E78938 /* ItemQueueViewController.swift */; };
+		9402AA5D1D40F7F600E78938 /* ItemQueueDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA5C1D40F7F600E78938 /* ItemQueueDataSource.swift */; };
+		9402AA661D41004100E78938 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402AA651D41004100E78938 /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 		9402AA541D40F2C400E78938 /* MonitorUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorUpdate.swift; sourceTree = "<group>"; };
 		9402AA561D40F41800E78938 /* MonitorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorService.swift; sourceTree = "<group>"; };
 		9402AA5A1D40F71E00E78938 /* ItemQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemQueueViewController.swift; sourceTree = "<group>"; };
+		9402AA5C1D40F7F600E78938 /* ItemQueueDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemQueueDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,8 +208,10 @@
 			files = (
 				9402AA571D40F41800E78938 /* MonitorService.swift in Sources */,
 				9402AA551D40F2C400E78938 /* MonitorUpdate.swift in Sources */,
+				9402AA5D1D40F7F600E78938 /* ItemQueueDataSource.swift in Sources */,
 				9402AA351D40F2A200E78938 /* AppDelegate.swift in Sources */,
 				9402AA5B1D40F71E00E78938 /* ItemQueueViewController.swift in Sources */,
+				9402AA661D41004100E78938 /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
